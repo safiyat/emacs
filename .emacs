@@ -3,6 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ ;; '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(ansi-color-faces-vector
    [default bold shadow italic underline bold bold-italic bold])
  '(column-number-mode t)
@@ -23,12 +24,19 @@
  ;; If there is more than one, they won't work right.
  )
 
+(load-file "~/.emacs.d/loadpaths/themes/flatland-theme.el")
+
+(load-file "~/.emacs.d/loadpaths/fullscreen.el")
+(require 'fullscreen)
+(fullscreen)
+(menu-bar-mode -1)
+
 (global-linum-mode t)
 
  ;; (setq inhibit-startup-message t)
 
 (setq user-full-name "Safiyat Reza")
-(setq user-mail-address "reza.safiyat@gmail.com")
+(setq user-mail-address "md.reza@snapdeal.com")
 
 (setq make-backup-files nil)
 
