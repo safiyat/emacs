@@ -24,6 +24,8 @@
  ;; If there is more than one, they won't work right.
  )
 
+ ;; Test comment
+
 (load-file "~/.emacs.d/loadpaths/themes/flatland-theme.el")
 
 (load-file "~/.emacs.d/loadpaths/fullscreen.el")
