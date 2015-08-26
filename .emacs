@@ -45,5 +45,5 @@
 
 (desktop-save-mode 1)
 
-(setq-default ispell-program-name "C:/Program Files (x86)/Aspell/bin/aspell.exe")
+(setq-default ispell-program-name "/usr/bin/aspell")
 (setq text-mode-hook '(lambda() (flyspell-mode t) ))
