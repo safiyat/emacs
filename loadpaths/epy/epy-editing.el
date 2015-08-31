@@ -19,7 +19,7 @@
 
 (when epy-load-yasnippet-p
   ;; Yasnippet - force the loading of the custom version of yasnippet
-  (require 'yasnippet (concat epy-install-dir "extensions/yasnippet/yasnippet"))
+  (requ ire 'yasnippet (concat epy-install-dir "extensions/yasnippet/yasnippet"))
   (load-file (concat epy-install-dir "extensions/snippet-helpers.el"))
 
   ;; this one is to activate django snippets
