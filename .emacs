@@ -24,20 +24,20 @@
  ;; If there is more than one, they won't work right.
  )
 
-(load-file "~/.emacs.d/loadpaths/themes/flatland-theme.el")
+(load-file "~/.emacs.d/git-repo/loadpaths/themes/flatland-theme.el")
 
 (if 
 	(display-graphic-p)
 	(progn
-		(load-file "~/.emacs.d/loadpaths/fullscreen.el")
+		(load-file "~/.emacs.d/git-repo/loadpaths/fullscreen.el")
 		(require 'fullscreen)
 		(fullscreen)
 	)
 )
 
-(load-file "~/.emacs.d/loadpaths/epy/epy-init.el")
+(load-file "~/.emacs.d/git-repo/loadpaths/epy/epy-init.el")
 
-; (load-file "~/.emacs.d/loadpaths/fullscreen.el")
+; (load-file "~/.emacs.d/git-repo/loadpaths/fullscreen.el")
 ; (require 'fullscreen)
 ; (fullscreen)
 (menu-bar-mode -1)
