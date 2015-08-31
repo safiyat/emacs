@@ -24,20 +24,29 @@
  ;; If there is more than one, they won't work right.
  )
 
-(load-file "~/.emacs.d/git-repo/loadpaths/themes/flatland-theme.el")
+(defconst cust-emacs-dir
+  (file-name-directory (or load-file-name
+                           (when (boundp 'bytecomp-filename) bytecomp-filename)
+                           buffer-file-name))
+  "Directory of custom-emacs"
+)
+
+; (add-to-list 'load-path cust-emacs-dir)
+
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/themes/flatland-theme.el"))
 
 (if 
 	(display-graphic-p)
 	(progn
-		(load-file "~/.emacs.d/git-repo/loadpaths/fullscreen.el")
+		(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/fullscreen.el"))
 		(require 'fullscreen)
 		(fullscreen)
 	)
 )
 
-(load-file "~/.emacs.d/git-repo/loadpaths/epy/epy-init.el")
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/epy/epy-init.el"))
 
-; (load-file "~/.emacs.d/git-repo/loadpaths/fullscreen.el")
+; (load-file "loadpaths/fullscreen.el")
 ; (require 'fullscreen)
 ; (fullscreen)
 (menu-bar-mode -1)
