@@ -75,3 +75,7 @@
 
 (setq-default ispell-program-name "/usr/bin/aspell")
 (setq text-mode-hook '(lambda() (flyspell-mode t) ))
+
+(epy-setup-checker "pyflakes %f")
+(require 'highlight-indentation)
+(add-hook 'python-mode-hook 'highlight-indentation)
