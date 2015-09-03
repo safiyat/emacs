@@ -90,3 +90,8 @@
    (interactive "nTransparency Value 0 - 100 opaque:")
    (set-frame-parameter (selected-frame) 'alpha value))
 
+(global-set-key [C-tab] 'next-multiframe-window)
+(global-set-key [C-S-iso-lefttab] 'previous-multiframe-window)
+
+(global-set-key [s-tab] 'next-buffer)
+(global-set-key [s-S-iso-lefttab] 'previous-buffer)
