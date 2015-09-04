@@ -78,7 +78,7 @@
 (desktop-save-mode 1)
 
 (setq-default ispell-program-name "/usr/bin/aspell")
-(setq text-mode-hook '(lambda() (flyspell-mode t) ))
+;; (setq text-mode-hook '(lambda() (flyspell-mode t) ))
 
 (epy-setup-checker "pyflakes %f")
 (require 'highlight-indentation)
@@ -95,3 +95,14 @@
 
 (global-set-key [s-tab] 'next-buffer)
 (global-set-key [s-S-iso-lefttab] 'previous-buffer)
+
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/fill-column-indicator.el"))
+(require 'fill-column-indicator)
+(define-globalized-minor-mode
+ global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ ;; (defun fci-rule-column-set (value)
+   ;; "Sets the column at which the rule is displayed"
+   ;; (defcustom fci-rule-column value))
