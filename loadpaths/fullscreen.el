@@ -114,4 +114,4 @@
 
 (provide 'fullscreen)
 
-;;; fullscreen.el ends here
+ ;; fullscreen.el ends here
