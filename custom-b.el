@@ -29,15 +29,14 @@
  )
 
 
-(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/themes/flatland-theme.el"))
-
-
 (defconst cust-emacs-dir
   (file-name-directory (or load-file-name
                            (when (boundp 'bytecomp-filename) bytecomp-filename)
                            buffer-file-name))
   "Directory of custom-emacs"
 )
+
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/themes/flatland-theme.el"))
 
 ; (add-to-list 'load-path cust-emacs-dir)
 
