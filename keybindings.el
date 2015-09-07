@@ -1,4 +1,4 @@
-(global-set-key (kbd "C-/") 'comment-or-uncomment-region)
+(global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
 
 
 (global-set-key (kbd "C-^") 'enlarge-window)
@@ -10,4 +10,3 @@
 
 (global-set-key [s-tab] 'next-buffer)
 (global-set-key [s-S-iso-lefttab] 'previous-buffer)
-

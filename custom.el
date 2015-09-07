@@ -1,9 +1,9 @@
 ;TO DO
-;      Figure out custom-set-variables, setq and setq-default
-;      Test various settings of fringe-mode
+;      Figure out custom-set-variables, setq and setq-default.
+;      Test various settings of fringe-mode.
+;      Parenthesis completion.
+;      Multiple cursors.
 ;      
-;
-;
 ;
 
 
@@ -23,7 +23,7 @@
 
 (load-file (concat (file-name-as-directory cust-emacs-dir) "appearance.el"))
 (load-file (concat (file-name-as-directory cust-emacs-dir) "keybindings.el"))
-(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/ido.el"))
+;; (load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/ido.el"))
 
 (add-to-list 'load-path (concat (file-name-as-directory cust-emacs-dir) "loadpaths/ac"))
 (require 'auto-complete-config)
@@ -39,3 +39,11 @@
 
 (setq-default ispell-program-name "/usr/bin/aspell")   ; Use aspell for the spellchecker.
 
+(defun comment-or-uncomment-region-or-line ()
+    "Comments or uncomments the region or the current line if there's no active region."
+    (interactive)
+    (let (beg end)
+        (if (region-active-p)
+            (setq beg (region-beginning) end (region-end))
+            (setq beg (line-beginning-position) end (line-end-position)))
+        (comment-or-uncomment-region beg end)))
