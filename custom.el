@@ -100,9 +100,13 @@
 (require 'fill-column-indicator)
 (define-globalized-minor-mode
  global-fci-mode fci-mode (lambda () (fci-mode 1)))
+
 (global-fci-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ;; (defun fci-rule-column-set (value)
    ;; "Sets the column at which the rule is displayed"
    ;; (defcustom fci-rule-column value))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;  PYTHON Environment pending
+

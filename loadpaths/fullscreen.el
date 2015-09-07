@@ -90,14 +90,14 @@
 ;;; Code:
 
 
-(defun fullscreen ()
+(defun fullscreen-set ()
   "Fullscreen."
   (interactive)
   (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
                          ;; if first parameter is '1', can't toggle fullscreen status
                          '(1 "_NET_WM_STATE_FULLSCREEN" 0)))
 
-(defun fullscreen-toggle ()
+(defun fullscreen ()
   "Toggle fullscreen status."
   (interactive)
   (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
