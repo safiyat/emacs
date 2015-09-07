@@ -34,12 +34,6 @@
 
 (load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/themes/flatland-theme.el")) ; Load theme.
 
-;; Set transparency of emacs
- (defun transparency (value)
-   "Sets the transparency of the frame window. 0=transparent/100=opaque"
-   (interactive "nTransparency Value 0 - 100 opaque:")
-   (set-frame-parameter (selected-frame) 'alpha value))
-
  (if     ; Return non-nil if emacs is running in a graphic display.
 	(display-graphic-p)
 	(progn
@@ -48,3 +42,9 @@
 		(fullscreen)
 	)
  )
+
+;; Set transparency of emacs
+ (defun transparency (value)
+   "Sets the transparency of the frame window. 0=transparent/100=opaque"
+   (interactive "nTransparency Value 0 - 100 opaque:")
+   (set-frame-parameter (selected-frame) 'alpha value))
