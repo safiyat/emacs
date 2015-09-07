@@ -1,5 +1,5 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.org/packages/")))
 
 (custom-set-variables
@@ -28,7 +28,6 @@
  ;; If there is more than one, they won't work right.
  )
 
-
 (defconst cust-emacs-dir
   (file-name-directory (or load-file-name
                            (when (boundp 'bytecomp-filename) bytecomp-filename)
@@ -36,10 +35,9 @@
   "Directory of custom-emacs"
 )
 
-(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/themes/flatland-theme.el"))
-
 ; (add-to-list 'load-path cust-emacs-dir)
 
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/themes/flatland-theme.el"))
 
 (if 
 	(display-graphic-p)
@@ -68,6 +66,7 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+(global-set-key (kbd "C-/") 'comment-or-uncomment-region)
 
  ;; (require 'autopair)
 
@@ -91,6 +90,11 @@
    (interactive "nTransparency Value 0 - 100 opaque:")
    (set-frame-parameter (selected-frame) 'alpha value))
 
+(global-set-key [C-tab] 'next-multiframe-window)
+(global-set-key [C-S-iso-lefttab] 'previous-multiframe-window)
+
+(global-set-key [s-tab] 'next-buffer)
+(global-set-key [s-S-iso-lefttab] 'previous-buffer)
 
 (load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/fill-column-indicator.el"))
 (require 'fill-column-indicator)
