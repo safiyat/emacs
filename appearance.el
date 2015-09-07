@@ -21,7 +21,7 @@
  )
 
 
-(menu-bar-mode -1)    ; Hide menu bar.
+(menu-bar-mode nil)    ; Hide menu bar.
 
 (global-linum-mode t) ; Enable line numbers globally.
 

@@ -3,8 +3,10 @@
 ;      Test various settings of fringe-mode.
 ;      Parenthesis completion.
 ;      Multiple cursors.
-;      
-;
+;      Virtualenv
+;      Python
+;      Flymake
+;      Pymacs
 
 
 (setq user-full-name "Md Safiyat Reza")
@@ -23,7 +25,8 @@
 
 (load-file (concat (file-name-as-directory cust-emacs-dir) "appearance.el"))
 (load-file (concat (file-name-as-directory cust-emacs-dir) "keybindings.el"))
-;; (load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/ido.el"))
+(load-file (concat (file-name-as-directory cust-emacs-dir) "autopair.el"))
+
 
 (add-to-list 'load-path (concat (file-name-as-directory cust-emacs-dir) "loadpaths/ac"))
 (require 'auto-complete-config)
@@ -35,9 +38,10 @@
 
 (savehist-mode t)              ; Save mini-buffer history
 
-(desktop-save-mode 1)          ; Save the desktop mode.
+(desktop-save-mode t)          ; Save the desktop mode.
 
 (setq-default ispell-program-name "/usr/bin/aspell")   ; Use aspell for the spellchecker.
+(ido-mode t)
 
 (defun comment-or-uncomment-region-or-line ()
     "Comments or uncomments the region or the current line if there's no active region."
