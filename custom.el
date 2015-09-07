@@ -23,6 +23,7 @@
 
 (load-file (concat (file-name-as-directory cust-emacs-dir) "appearance.el"))
 (load-file (concat (file-name-as-directory cust-emacs-dir) "keybindings.el"))
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/ido.el"))
 
 (add-to-list 'load-path (concat (file-name-as-directory cust-emacs-dir) "loadpaths/ac"))
 (require 'auto-complete-config)
