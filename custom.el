@@ -31,31 +31,6 @@
 
 
 (load-file (concat (file-name-as-directory cust-emacs-dir) "appearance.el"))
+(load-file (concat (file-name-as-directory cust-emacs-dir) "editing.el"))
+(load-file (concat (file-name-as-directory cust-emacs-dir) "environment.el"))
 (load-file (concat (file-name-as-directory cust-emacs-dir) "keybindings.el"))
-(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/autopair.el"))
-
-
-(add-to-list 'load-path (concat (file-name-as-directory cust-emacs-dir) "loadpaths/ac"))
-(require 'auto-complete-config)
-(ac-config-default)
-
-(setq make-backup-files nil)   ; Don't make backup files.
-
-(defalias 'yes-or-no-p 'y-or-n-p)   ; Use y-n-p instead of yes-no-p
-
-(savehist-mode t)              ; Save mini-buffer history
-
-(desktop-save-mode t)          ; Save the desktop mode.
-
-(setq-default ispell-program-name "/usr/bin/aspell")   ; Use aspell for the spellchecker.
-(ido-mode t)
-(setq-default autopair-mode t)
-
-(defun comment-or-uncomment-region-or-line ()
-    "Comments or uncomments the region or the current line if there's no active region."
-    (interactive)
-    (let (beg end)
-        (if (region-active-p)
-            (setq beg (region-beginning) end (region-end))
-            (setq beg (line-beginning-position) end (line-end-position)))
-        (comment-or-uncomment-region beg end)))
