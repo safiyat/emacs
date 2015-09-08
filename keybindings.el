@@ -10,6 +10,11 @@
 (global-set-key [s-tab] 'next-buffer)
 (global-set-key [s-S-iso-lefttab] 'previous-buffer)
 
+
+(setq help-char nil)          ; To enable C-h for 'backward-delete-char
+(setq kill-region nil)        ; To enable C-w for 'backward-kill-word
+(setq universal-argument nil) ; To enable C-u for 'backward-kill-sentence
+
 (global-set-key [C-h] 'backward-delete-char)
 (global-set-key [C-w] 'backward-kill-word)
 (global-set-key [C-u] 'backward-kill-sentence)
