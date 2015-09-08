@@ -15,6 +15,7 @@
 (setq kill-region nil)        ; To enable C-w for 'backward-kill-word
 (setq universal-argument nil) ; To enable C-u for 'backward-kill-sentence
 
-(global-set-key [C-h] 'backward-delete-char)
-(global-set-key [C-w] 'backward-kill-word)
-(global-set-key [C-u] 'backward-kill-sentence)
+(global-set-key (kbd "C-h") 'backward-delete-char)
+(global-set-key (kbd "C-w") 'backward-kill-word)
+(global-set-key (kbd "C-u") 'backward-kill-sentence)
+
