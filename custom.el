@@ -13,9 +13,7 @@
 ;      Override C-h to use keybindings.el
 ;      Override C-w to use keybindings.el
 ;      Override C-u to use keybindings.el
-;
-;
-;
+
 
 (setq user-full-name "Md Safiyat Reza")
 (setq user-mail-address "md.reza@snapdeal.com")
