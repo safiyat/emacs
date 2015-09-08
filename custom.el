@@ -1,13 +1,21 @@
 ;TO DO
 ;      Figure out custom-set-variables, setq and setq-default.
 ;      Test various settings of fringe-mode.
-;      Parenthesis completion.
 ;      Multiple cursors.
 ;      Virtualenv
 ;      Python
 ;      Flymake
 ;      Pymacs
-
+;    Auto-complete
+;      ac-fuzzy-complete
+;      ac-user-dictionary   - ac-dictionary-directories
+;
+;      Override C-h to use keybindings.el
+;      Override C-w to use keybindings.el
+;      Override C-u to use keybindings.el
+;
+;
+;
 
 (setq user-full-name "Md Safiyat Reza")
 (setq user-mail-address "md.reza@snapdeal.com")
@@ -25,7 +33,7 @@
 
 (load-file (concat (file-name-as-directory cust-emacs-dir) "appearance.el"))
 (load-file (concat (file-name-as-directory cust-emacs-dir) "keybindings.el"))
-(load-file (concat (file-name-as-directory cust-emacs-dir) "autopair.el"))
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/autopair.el"))
 
 
 (add-to-list 'load-path (concat (file-name-as-directory cust-emacs-dir) "loadpaths/ac"))
@@ -42,6 +50,7 @@
 
 (setq-default ispell-program-name "/usr/bin/aspell")   ; Use aspell for the spellchecker.
 (ido-mode t)
+(setq-default autopair-mode t)
 
 (defun comment-or-uncomment-region-or-line ()
     "Comments or uncomments the region or the current line if there's no active region."

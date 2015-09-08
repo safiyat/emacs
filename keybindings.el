@@ -1,6 +1,5 @@
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
 
-
 (global-set-key (kbd "C-^") 'enlarge-window)
 (global-set-key (kbd "C-}") 'enlarge-window-horizontally)
 (global-set-key (kbd "C-{") 'shrink-window-horizontally)
@@ -10,3 +9,7 @@
 
 (global-set-key [s-tab] 'next-buffer)
 (global-set-key [s-S-iso-lefttab] 'previous-buffer)
+
+(global-set-key [C-h] 'backward-delete-char)
+(global-set-key [C-w] 'backward-kill-word)
+(global-set-key [C-u] 'backward-kill-sentence)
