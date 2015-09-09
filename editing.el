@@ -18,7 +18,7 @@
         ;; (print beg)
         (goto-char beg)
         ;; (print end)
-        (set-mark-command)
+        (set-mark-command t)
         (goto-char end)
         (comment-or-uncomment-region beg end))
     )
