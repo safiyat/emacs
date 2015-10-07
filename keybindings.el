@@ -19,3 +19,5 @@
 (global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-u") 'backward-kill-sentence)
 
+(global-set-key (kbd "<M-S-up>") 'scroll-down-line)
+(global-set-key (kbd "<M-S-down>") 'scroll-up-line)

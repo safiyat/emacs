@@ -69,8 +69,8 @@ Grow a window taller					C - x   ^
 Grow a window narrower					C - x   {
 Grow a window wider					C - x	}
 
-
-
+Scroll buffer up                                        M - S - up
+Scroll buffer down                                      M - S - down
 
 COMMAND MANAGEMENT
 ------------------
