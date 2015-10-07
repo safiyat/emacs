@@ -7,6 +7,7 @@
 
 (load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/autopair.el"))
 (setq-default autopair-mode t)
+(setq-default visual-line-mode t)
 
 (defun comment-or-uncomment-region-or-line ()
     "Comments or uncomments the region or the current line if there's no active region."

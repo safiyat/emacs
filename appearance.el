@@ -22,6 +22,7 @@
  )
 
 (global-linum-mode t) ; Enable line numbers globally.
+(visual-line-mode t)  ; Enable word wrapping in the english format.
 
 (defconst cust-emacs-dir     ; Find the path of the current directory.
   (file-name-directory (or load-file-name
@@ -38,7 +39,7 @@
     (fullscreen))
 
 ;; Set transparency of emacs
- (defun transparency (value)
-   "Sets the transparency of the frame window. 0=transparent/100=opaque"
-   (interactive "nTransparency Value 0 - 100 opaque:")
+ (defun opacity (value)
+   "Sets the opacity of the frame window. 0=transparent/100=opaque"
+   (interactive "nOpacity Value 0 - 100 opaque:")
    (set-frame-parameter (selected-frame) 'alpha value))
