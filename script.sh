@@ -35,7 +35,8 @@ then
 else
         echo "Server already running. Starting a client."
 fi
-echo "HERE YOU GO: $@"
+
+# echo "HERE YOU GO: $@"
 
 #if [ -z "$*" ]
 #then
