@@ -22,8 +22,8 @@ SERVER_RUNNING=$(pgrep -f "emacs --daemon")
 if [ -z $SERVER_RUNNING ]
 then
         echo "Emacs server not running. Starting the server..."
-        /etc/alternatives/emacs --daemon 2> /dev/null
-        if [ $? ]
+        timeout 10s /etc/alternatives/emacs --daemon 2> /dev/null
+        if [[ $? -eq "0" ]]
         then
             echo "Server started successfully."
         else
