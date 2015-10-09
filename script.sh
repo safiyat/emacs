@@ -10,11 +10,9 @@
 
 if [[ -t 1 ]]
 then
-        echo "Terminal"
         TERMINAL=true
         CREATE="-nw"
 else
-        echo "Not a terminal"
         TERMINAL=false
         CREATE="-c"
 fi
@@ -25,7 +23,6 @@ if [ -z $SERVER_RUNNING ]
 then
         echo "Emacs server not running. Starting the server..."
         /etc/alternatives/emacs --daemon 2> /dev/null
-        # echo $?
         if [ $? ]
         then
             echo "Server started successfully."
@@ -37,12 +34,4 @@ else
         echo "Server already running. Starting a client."
 fi
 
-# echo "HERE YOU GO: $@"
-
-#if [ -z "$*" ]
-#then
-#        emacsclient -c  2> /dev/null
-#else
-#        emacsclient $@  2> /dev/null
-#fi
 emacsclient $CREATE $@  2> /dev/null
