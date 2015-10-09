@@ -8,12 +8,13 @@
 #                                                                             #
 ###############################################################################
 
-if [[ -t 1 ]]; then
+if [[ -t 1 ]]
+then
         echo "Terminal"
         TERMINAL=true
         CREATE="-nw"
 else
-        echo "Not-a-terminal"
+        echo "Not a terminal"
         TERMINAL=false
         CREATE="-c"
 fi
@@ -24,7 +25,7 @@ if [ -z $SERVER_RUNNING ]
 then
         echo "Emacs server not running. Starting the server..."
         /etc/alternatives/emacs --daemon 2> /dev/null
-        echo $?
+        # echo $?
         if [ $? ]
         then
             echo "Server started successfully."
