@@ -8,13 +8,13 @@
 #                                                                             #
 ###############################################################################
 
-if [[ -t 1 ]]
+if [ $TERM == "dumb" ]
 then
-        TERMINAL=true
-        CREATE="-nw"
-else
         TERMINAL=false
         CREATE="-c"
+else
+        TERMINAL=true
+        CREATE="-nw"
 fi
 
 SERVER_RUNNING=$(pgrep -f "emacs --daemon")
@@ -35,3 +35,4 @@ else
 fi
 
 emacsclient $CREATE $@  2> /dev/null
+
