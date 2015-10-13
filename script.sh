@@ -35,4 +35,3 @@ else
 fi
 
 emacsclient $CREATE $@  2> /dev/null
-
