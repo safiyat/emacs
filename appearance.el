@@ -14,13 +14,6 @@
  '(menu-bar-mode nil)               ; Hide menu bar.
 )
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
 (global-linum-mode t) ; Enable line numbers globally.
 (visual-line-mode t)  ; Enable word wrapping in the english format.
 
@@ -33,9 +26,9 @@
 
 (load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/themes/flatland-theme.el")) ; Load theme.
 
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/fullscreen.el"))
+(require 'fullscreen)
 (when (display-graphic-p)   ;; Return non-nil if emacs is running in a graphic display.
-    (load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/fullscreen.el"))
-    (require 'fullscreen)
     (fullscreen))
 
 ;; Set transparency of emacs

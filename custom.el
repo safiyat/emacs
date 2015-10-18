@@ -14,6 +14,8 @@
 ;;      Override C-w to use keybindings.el
 ;;      Override C-u to use keybindings.el
 
+;;		appearance.el [line 30] Make it perfect.
+
 
 (setq user-full-name "Md Safiyat Reza")
 (setq user-mail-address "md.reza@snapdeal.com")
@@ -28,16 +30,6 @@
                            buffer-file-name))
   "Directory of custom-emacs"
 )
-
-;;(defun post-frame-create (&optional frame)
-;;"Functions to be run after each new frame is created."
-;;    (load-file (concat (file-name-as-directory cust-emacs-dir) "appearance.el"))
-;;    (load-file (concat (file-name-as-directory cust-emacs-dir) "editing.el"))
-;;    (load-file (concat (file-name-as-directory cust-emacs-dir) "environment.el"))
-;;    (load-file (concat (file-name-as-directory cust-emacs-dir) "keybindings.el"))
-;;)
-
-;;(add-hook 'after-make-frame 'post-frame-create)
 
 (load-file (concat (file-name-as-directory cust-emacs-dir) "appearance.el"))
 (load-file (concat (file-name-as-directory cust-emacs-dir) "editing.el"))
