@@ -4,7 +4,12 @@
 
 (savehist-mode t)              ; Save mini-buffer history
 
-(desktop-save-mode t)          ; Save the desktop mode.
+; (desktop-save-mode t)          ; Save the desktop mode.
+
+(when (not (boundp 'dsm-on))
+      (desktop-save-mode t)
+      ; (print "desktop-save-mode t")
+      (setq dsm-on t))        ; Save the desktop mode.
 
 (setq-default ispell-program-name "/usr/bin/aspell")   ; Use aspell for the spellchecker.
 

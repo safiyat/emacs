@@ -16,6 +16,7 @@
 
 ;;		appearance.el [line 30] Make it perfect.
 
+(print (current-time-string))
 
 (setq user-full-name "Md Safiyat Reza")
 (setq user-mail-address "md.reza@snapdeal.com")
