@@ -11,7 +11,7 @@
 
 LOGFILE="/home/safiyat/logs.emacs"
 NOLOG="/dev/null"
-log=$LOGFILE
+log=$NOLOG
 
 bold=$(tput bold)
 normal=$(tput sgr0)
