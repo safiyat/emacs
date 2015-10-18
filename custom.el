@@ -35,3 +35,9 @@
 (load-file (concat (file-name-as-directory cust-emacs-dir) "editing.el"))
 (load-file (concat (file-name-as-directory cust-emacs-dir) "environment.el"))
 (load-file (concat (file-name-as-directory cust-emacs-dir) "keybindings.el"))
+
+
+(defun startup_func(_)
+(load-file "/home/safiyat/Hogwarts/Github/emacs/custom.el"))
+
+(add-to-list 'after-make-frame-functions #'startup_func)
