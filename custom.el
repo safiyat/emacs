@@ -39,6 +39,6 @@
 
 
 (defun startup_func(_)
-(load-file "/home/safiyat/Hogwarts/Github/emacs/custom.el"))
+(load-file (concat (file-name-as-directory cust-emacs-dir) "custom.el")))
 
 (add-to-list 'after-make-frame-functions #'startup_func)
