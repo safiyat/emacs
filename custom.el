@@ -1,4 +1,5 @@
 ;; TO DO
+;;      Multiple independent shells
 ;;      Figure out custom-set-variables, setq and setq-default.
 ;;      Test various settings of fringe-mode.
 ;;      Multiple cursors.
@@ -9,10 +10,6 @@
 ;;    Auto-complete
 ;;      ac-fuzzy-complete
 ;;      ac-user-dictionary   - ac-dictionary-directories
-
-;;      Override C-h to use keybindings.el
-;;      Override C-w to use keybindings.el
-;;      Override C-u to use keybindings.el
 
 ;;		appearance.el [line 30] Make it perfect.
 
