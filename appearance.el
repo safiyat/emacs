@@ -5,7 +5,7 @@
  '(display-battery-mode t)          ; Show battery status
  '(display-time-mode t)             ; Show system time
 ;;;;;;;;;;;;;;;;;Testing Required;;;;;;;;;;;;;;
- '(fringe-mode nil nil (fringe))    ; Fringe 
+;; '(fringe-mode nil nil (fringe))    ; Fringe 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  '(save-place t nil (saveplace))    ; Point goes to the last place where it was when you previously visited the same file.
  '(show-paren-mode t)               ; Highlight matching parenthesis and other characters.

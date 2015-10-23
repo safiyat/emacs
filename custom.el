@@ -1,7 +1,6 @@
 ;; TO DO
 ;;      Multiple independent shells
 ;;      Figure out custom-set-variables, setq and setq-default.
-;;      Test various settings of fringe-mode.
 ;;      Multiple cursors.
 ;;      Virtualenv
 ;;      Python
