@@ -4,7 +4,6 @@
 ;;      Multiple cursors.
 ;;      Virtualenv
 ;;      Python
-;;      Flymake
 ;;      Pymacs
 ;;    Auto-complete
 ;;      ac-fuzzy-complete

@@ -11,7 +11,7 @@
 
 LOGFILE="/home/safiyat/logs.emacs"
 NOLOG="/dev/null"
-log=$LOGFILE
+log=$NOLOG
 
 bold=$(tput bold)
 normal=$(tput sgr0)
@@ -32,19 +32,15 @@ SERVER_RUNNING=$(pgrep -f "emacs --daemon")
 if [ -z $SERVER_RUNNING ]
 then
         echo "`date`: Emacs server not running. Starting the server..." >> $log
-        # echo "Emacs server not running. Starting the server..."
         timeout 10s /etc/alternatives/emacs --daemon 2> /dev/null
         if [[ $? -eq "0" ]]
         then
-            # echo "Server started successfully."
             echo "`date`: Server started successfully." >> $log
         else
-            # echo "Server couldn't be started."
             echo "`date`: Server couldn't be started." >> $log
             exit
         fi
 else
-        # echo "Server already running. Starting a client."
         echo "`date`: Server already running. Starting a client." >> $log
 fi
 
