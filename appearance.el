@@ -13,6 +13,7 @@
 
 (global-linum-mode t) ; Enable line numbers globally.
 (visual-line-mode t)  ; Enable word wrapping in the english format.
+(toggle-truncate-lines t) ; Disable word wrap.
 
 (defconst cust-emacs-dir     ; Find the path of the current directory.
   (file-name-directory (or load-file-name
