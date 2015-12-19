@@ -9,28 +9,27 @@
  '(size-indication-mode t)          ; Show size of buffer on the mode line.
  '(tool-bar-mode nil)               ; Hide tool bar.
  '(menu-bar-mode nil)               ; Hide menu bar.
+ '(scroll-bar-mode nil)               ; Hide menu bar.
 )
 
 (global-linum-mode t) ; Enable line numbers globally.
 (visual-line-mode t)  ; Enable word wrapping in the english format.
 (toggle-truncate-lines t) ; Disable word wrap.
-
-(defconst cust-emacs-dir     ; Find the path of the current directory.
-  (file-name-directory (or load-file-name
-                           (when (boundp 'bytecomp-filename) bytecomp-filename)
-                           buffer-file-name))
-  "Directory of custom-emacs"
-)
-
-(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/themes/flatland-theme.el")) ; Load theme.
-
-(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpaths/fullscreen.el"))
-(require 'fullscreen)
-(when (display-graphic-p)   ;; Return non-nil if emacs is running in a graphic display.
-    (fullscreen))
+(blink-cursor-mode t)
+;;(set-cursor-color 'white)
+;;(cursor-type hbar)
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpath/themes/flatland-theme.el")) ; Load theme.
 
 ;; Set transparency of emacs
 (defun opacity (value)
    "Sets the opacity of the frame window. 0=transparent/100=opaque"
    (interactive "nOpacity Value 0 - 100 opaque:")
    (set-frame-parameter (selected-frame) 'alpha value))
+
+
+(require 'frame)
+(defun set-cursor-hook (frame)
+(modify-frame-parameters
+ frame (list (cons 'cursor-color "White"))))
+
+(add-hook 'after-make-frame-functions 'set-cursor-hook)
