@@ -15,3 +15,5 @@
 (setq-default ispell-program-name "/usr/bin/aspell")   ; Use aspell for the spellchecker.
 
 (ido-mode t)                                           ; Enable ido mode
+
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpath/markdown-mode.el")) ; Load markdown module.
