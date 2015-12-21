@@ -26,9 +26,9 @@ Bugs
 - C-TAB switches between windows in different frames.
 - Run emacs server per user when started. ~~Update run_emacs to only `pgrep` for the current user.~~
 - ~~Do the same as above for kill emacs.~~
-- ~~**Big trouble with `desktop-save-in-desktop-dir`. Make if something like a `-f`.**~~
+- ~~Big trouble with `desktop-save-in-desktop-dir`. Make if something like a `-f`.~~
 
 Features
 --------
 
-{{md 'docs/Keybindings.md'}}
+{{ md 'docs/Keybindings.md' }}
