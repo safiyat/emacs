@@ -12,10 +12,10 @@ Installation is all simplified! <br><br>
 
 To-do
 --------
- - ~~Add a package to cleanup whitespace.~~ [This.](http://www.gnu.org/software/emacs/manual/html_node/emacs/Useless-Whitespace.html)
  - Add package to view Markdown files. [markdown-mode.el](http://jblevins.org/projects/markdown-mode/markdown-mode.el).
- - initial-scratch-message to nil.
+ - Initial-scratch-message to nil.
  - Add something like an upstart feature that fires up an emacs server for every user, as soon as the os runs.
+ - ~~Add a package to cleanup whitespace.~~ [This.](http://www.gnu.org/software/emacs/manual/html_node/emacs/Useless-Whitespace.html)
  - ~~Inhibit-startup-screen.~~
  - ~~Hide menu bar, tool bar, scroll bar.~~
  - ~~Write script to enable auto-killing of emacs when shutting down or rebooting.
