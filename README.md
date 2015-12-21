@@ -31,4 +31,4 @@ Bugs
 Features
 --------
 
-{{md docs/Keybindings.md}}
+{{md 'docs/Keybindings.md'}}
