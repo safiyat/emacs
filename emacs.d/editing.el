@@ -6,6 +6,8 @@
 (load-file (concat (file-name-as-directory cust-emacs-dir) "loadpath/autopair.el"))
 (setq-default autopair-mode t)
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 (defun comment-or-uncomment-region-or-line ()
     "Comments or uncomments the region or the current line if there's no active region."
     (interactive)
