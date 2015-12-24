@@ -43,7 +43,7 @@ then
         echo "$($bold)`date`: Using a terminal.$($normal)" >> $LOG
 else
         TERMINAL=false
-        CREATE=" -c " 
+        CREATE=" -c "
         echo "$($bold)`date`: Using a graphical frame.$($normal)" >> $LOG
 fi
 
