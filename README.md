@@ -20,7 +20,9 @@ To-do
  - ~~Hide menu bar, tool bar, scroll bar.~~
  - ~~Write script to enable auto-killing of emacs when shutting down or rebooting.
      <br>Script to go in `/etc/init.d/`. Symlinks in `/etc/rc0.d/K??kill_emacs` and `/etc/rc6.d/K??kill_emacs`.~~
-
+ - Use space instead of TABs.
+ - Enable/disable whitespace cleanup.
+ 
 Bugs
 ----
 - C-TAB switches between windows in different frames.
