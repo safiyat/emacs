@@ -48,7 +48,7 @@
 |Move backward one screenful		|			M - v|
 |Go to line number			|		    M - g - g|
 
-####BUFFER MANAGEMENT
+#### BUFFER MANAGEMENT
 
 |                                       |                          |
 |:--------------------------------------|:------------------------:|
@@ -65,6 +65,12 @@
 |Grow a window wider			|		  C - x   }|
 |Scroll buffer up                       |                M - S - up|
 |Scroll buffer down                     |              M - S - down|
+
+#### REGION MANAGEMENT
+
+|                                       |                          |
+|:--------------------------------------|:------------------------:|
+|Display size of the region		|		  M - =    |
 
 #### COMMAND MANAGEMENT
 
