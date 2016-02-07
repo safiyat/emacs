@@ -18,7 +18,7 @@
 #set -x
 
 # File to store the script logging information if selected
-LOGFILE="$HOME/log.emacs"
+LOGFILE="$HOME/.log.emacs"
 
 # Send logs to the null device
 NOLOG="/dev/null"
