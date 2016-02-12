@@ -16,4 +16,5 @@
 
 (ido-mode t)                                           ; Enable ido mode
 
-(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpath/markdown-mode.el")) ; Load markdown module.
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpath/mode/markdown-mode.el")) ; Load markdown module.
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpath/mode/yaml-mode.el")) ; Load yaml module.
