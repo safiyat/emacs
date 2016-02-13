@@ -1,10 +1,18 @@
 (add-to-list 'load-path (concat (file-name-as-directory cust-emacs-dir) "loadpath/ac"))
 (require 'auto-complete-config)
 ;; (ac-config-default)
-(setq-default auto-complete-mode nil)
+(setq-default auto-complete-mode t)
+
+(setq-default indent-tabs-mode nil)
 
 (load-file (concat (file-name-as-directory cust-emacs-dir) "loadpath/autopair.el"))
-(setq-default autopair-mode t)
+(require 'autopair)
+(autopair-global-mode)
+
+(load-file (concat (file-name-as-directory cust-emacs-dir) "loadpath/fill-column-indicator.el"))
+(require 'fill-column-indicator)
+(setq-default fci-mode nil)
+(setq-default fci-rule-column 80)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
