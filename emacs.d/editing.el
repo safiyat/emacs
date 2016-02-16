@@ -16,6 +16,8 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+(add-hook 'before-save-hook (lambda () (untabify (point-min) (point-max))))
+
 (defun comment-or-uncomment-region-or-line ()
     "Comments or uncomments the region or the current line if there's no active region."
     (interactive)
