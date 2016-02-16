@@ -9,16 +9,16 @@ UID_LIST=$(cut -d: -f3 /etc/passwd)
 
 for UID1 in $UID_LIST
 do
-    if [ -S "/tmp/emacs$UID/server" ]
+    if [ -S "/tmp/emacs$UID1/server" ]
     then
         USER=$(getent passwd $UID1 | cut -d: -f1)
         sudo su $USER -c '
             LOGFILE=$HOME/log.emacs
             echo "For user $USER, logfile $LOGFILE"
             echo -n "`date` : Killing emacs-server..." | tee -a $LOGFILE
-            emacsclient -e "(setq desktop-dirname \"$HOME/.emacs.d/\")" > /dev/null
-            emacsclient -e "(desktop-save-in-desktop-dir)" > /dev/null
-            emacsclient -e "(kill-emacs)" > /dev/null
+            /usr/local/bin/emacsclient -e "(setq desktop-dirname \"$HOME/.emacs.d/\")" > /dev/null
+            /usr/local/bin/emacsclient -e "(desktop-save-in-desktop-dir)" > /dev/null
+            /usr/local/bin/emacsclient -e "(kill-emacs)" > /dev/null
             if [ "$?" -eq "0" ]
             then
                 echo " Killed." | tee -a $LOGFILE

@@ -30,10 +30,10 @@ for UID1 in $UID_LIST
 do
     USER=$(getent passwd $UID1 | cut -d: -f1)
     sudo su $USER -c '
-    if [ -n "$HOME" ]
-    then
-        echo "(load-file \"$(pwd)/emacs.d/custom.el\")" > $HOME/.emacs
-    fi
+        if [ -n "$HOME" ]
+        then
+            echo "(load-file \"$(pwd)/emacs.d/custom.el\")" > $HOME/.emacs
+        fi
     '
 done
 sudo ln -sf $TOP_DIR/run.sh /usr/bin/emacs
