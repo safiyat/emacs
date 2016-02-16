@@ -41,7 +41,7 @@ then
 fi
 
 sudo $PACKAGE_MANAGER -y install $BUILDESSENTIAL tar
-sudo $PACKAGE_MANAGER -y $BUILDDEP emacs
+sudo $PACKAGE_MANAGER -y $BUILDDEP emacs24
 
 
 tar xvf emacs-24.5.tar.xz
