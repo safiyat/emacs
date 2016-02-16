@@ -32,3 +32,5 @@
         ;; (goto-char end)
         (comment-or-uncomment-region beg end))
     )
+
+(setq initial-scratch-message "")

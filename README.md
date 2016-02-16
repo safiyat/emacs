@@ -12,7 +12,6 @@ Installation is all simplified! <br><br>
 
 To-do
 --------
- - Initial-scratch-message to nil.
  - Add something like an upstart feature that fires up an emacs server for every user, as soon as the os runs.
  - ~~Add package to view Markdown files. [markdown-mode.el](http://jblevins.org/projects/markdown-mode/markdown-mode.el).~~
  - ~~Add a package to cleanup whitespace.~~ [This.](http://www.gnu.org/software/emacs/manual/html_node/emacs/Useless-Whitespace.html)
@@ -22,6 +21,7 @@ To-do
      <br>Script to go in `/etc/init.d/`. Symlinks in `/etc/rc0.d/K??kill_emacs` and `/etc/rc6.d/K??kill_emacs`.~~
  - ~~Use space instead of TABs.~~
  - ~~Enable/disable whitespace cleanup.~~
+ - ~~Initial-scratch-message to nil.~~
 
 Bugs
 ----
