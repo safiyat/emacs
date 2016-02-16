@@ -7,25 +7,25 @@
 
 UID_LIST=$(cut -d: -f3 /etc/passwd)
 
-for UID in $UID_LIST
+for UID1 in $UID_LIST
 do
     if [ -S "/tmp/emacs$UID/server" ]
     then
-	USER=$(getent passwd $UID | cut -d: -f1)
+        USER=$(getent passwd $UID1 | cut -d: -f1)
         sudo su $USER -c '
-	LOGFILE=$HOME/log.emacs
-	echo "For user $USER, logfile $LOGFILE"
-	echo -n "`date` : Killing emacs-server..." | tee -a $LOGFILE
-	emacsclient -e "(setq desktop-dirname \"$HOME/.emacs.d/\")" > /dev/null
-	emacsclient -e "(desktop-save-in-desktop-dir)" > /dev/null
-	emacsclient -e "(kill-emacs)" > /dev/null
-	if [ "$?" -eq "0" ]
-	then
-            echo " Killed." | tee -a $LOGFILE
-	else
-            echo " Could not be killed." | tee -a $LOGFILE
-	fi
-	echo "" | tee -a $LOGFILE
-	'
+            LOGFILE=$HOME/log.emacs
+            echo "For user $USER, logfile $LOGFILE"
+            echo -n "`date` : Killing emacs-server..." | tee -a $LOGFILE
+            emacsclient -e "(setq desktop-dirname \"$HOME/.emacs.d/\")" > /dev/null
+            emacsclient -e "(desktop-save-in-desktop-dir)" > /dev/null
+            emacsclient -e "(kill-emacs)" > /dev/null
+            if [ "$?" -eq "0" ]
+            then
+                echo " Killed." | tee -a $LOGFILE
+            else
+                echo " Could not be killed." | tee -a $LOGFILE
+            fi
+            echo "" | tee -a $LOGFILE
+        '
     fi
 done

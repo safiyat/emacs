@@ -26,9 +26,9 @@ TOP_DIR=$(pwd)
 
 UID_LIST=$(cut -d: -f3 /etc/passwd)
 
-for UID in $UID_LIST
+for UID1 in $UID_LIST
 do
-    USER=$(getent passwd $UID | cut -d: -f1)
+    USER=$(getent passwd $UID1 | cut -d: -f1)
     sudo su $USER -c '
     if [ -n "$HOME" ]
     then
@@ -47,6 +47,6 @@ sudo ln -sf /etc/init.d/kill_emacs /etc/rc6.d/K99kill_emacs
 #then
 #    echo "alias killemacs='emacsclient -e \"(kill-emacs)\"'" >> ~/.bashrc
 #else
-#    echo "Else: " 
+#    echo "Else: "
 #    grep "alias killemacs=" ~/.bashrc
 #fi
