@@ -5,6 +5,12 @@
 
 #set -x
 
+if [[ $EUID -ne 0 ]]
+then
+    echo "This script must be run as root." 1>&2
+    exit 1
+fi
+
 UID_LIST=$(cut -d: -f3 /etc/passwd)
 
 for UID1 in $UID_LIST
@@ -13,7 +19,7 @@ do
     then
         USER=$(getent passwd $UID1 | cut -d: -f1)
         sudo su $USER -c '
-            LOGFILE=$HOME/log.emacs
+            LOGFILE=$HOME/.log.emacs
             echo "For user $USER, logfile $LOGFILE"
             echo -n "`date` : Killing emacs-server..." | tee -a $LOGFILE
             /usr/local/bin/emacsclient -e "(setq desktop-dirname \"$HOME/.emacs.d/\")" > /dev/null
