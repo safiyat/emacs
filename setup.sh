@@ -8,7 +8,10 @@ then
     exit 1
 fi
 
-HASH=$(md5sum -c MD5SUM 2> /dev/null)
+if [ -f emacs-24.5.tar.xz ]
+then
+    HASH=$(md5sum -c MD5SUM 2> /dev/null)
+fi
 
 if [ "emacs-24.5.tar.xz: OK" != "$HASH" ]
 then
@@ -33,15 +36,17 @@ then
     PACKAGE_MANAGER=dnf
     BUILDDEP=builddep
     BUILDESSENTIAL=@development-tools
+    EMACS=emacs
 elif [ -f /etc/lsb-release ]
 then
     PACKAGE_MANAGER=apt-get
     BUILDDEP=build-dep
     BUILDESSENTIAL=build-essential
+    EMACS=emacs24
 fi
 
 sudo $PACKAGE_MANAGER -y install $BUILDESSENTIAL tar
-sudo $PACKAGE_MANAGER -y $BUILDDEP emacs24
+sudo $PACKAGE_MANAGER -y $BUILDDEP $EMACS
 
 
 tar xvf emacs-24.5.tar.xz
