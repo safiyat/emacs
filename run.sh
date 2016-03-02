@@ -1,16 +1,16 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 ###############################################################################
 #                                    run.sh                                   #
 #                                                                             #
 #    A script to handle the server-client mode.                               #
 #    Upon invokation, if a server is not running, starts a server and then    #
-#    runs the client.							      #
+#    runs the client.                                                         #
 #    Intelligently starts the client in a terminal or in a graphical frame as #
-#    invoked.	   	      	     	  	      	   	     	      #
-#    									      #
+#    invoked.                                                                 #
+#                                                                             #
 #    Run the following command to run the script whenever emacs is invoked.   #
-#    	     	       	       	      	  	 	  	   	      #
+#                                                                             #
 #                 ln -sf /full/path/to/run.sh /usr/bin/emacs                  #
 #                                                                             #
 ###############################################################################

@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # The script must be symlinked to /etc/init.d/... which in turn be symlinked to
 # /etc/rc0.d/K99kill_emacs and /etc/rc6.d/K99kill_emacs.
