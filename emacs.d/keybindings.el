@@ -27,3 +27,5 @@
 
 (global-set-key (kbd "<M-S-up>") 'scroll-down-line)
 (global-set-key (kbd "<M-S-down>") 'scroll-up-line)
+
+(global-set-key (kbd "<C-f5>") 'revert-buffer)
