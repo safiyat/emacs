@@ -9,7 +9,8 @@
  '(size-indication-mode t)          ; Show size of buffer on the mode line.
  '(tool-bar-mode nil)               ; Hide tool bar.
  '(menu-bar-mode nil)               ; Hide menu bar.
- '(scroll-bar-mode nil)               ; Hide menu bar.
+ '(scroll-bar-mode nil)             ; Hide menu bar.
+ '(send-mail-function (quote sendmail-send-it))
 )
 
 (global-linum-mode t) ; Enable line numbers globally.
