@@ -2,8 +2,11 @@
 
 (savehist-mode t)                                      ; Save mini-buffer history
 
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+
 ; Error prone. Make it work in server/client as well as other scenarios.
-;; (desktop-save-mode t)                                  ; Error prone.
+;; (desktop-save-mode t)                               ; Error prone.
 (when (not (boundp 'dsm-on))
       (desktop-save-mode t)
       ; (print "desktop-save-mode t")
