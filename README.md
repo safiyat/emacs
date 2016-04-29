@@ -14,6 +14,7 @@ To-do
 --------
  - Add something like an upstart feature that fires up an emacs server for every user, as soon as the os runs.
  - Copy the `run.sh` script to `/usr/local/bin/emacs` to enable the emacs shortcut for every user. Also, copy the `.emacs.d` directory to some location that is accessible to everyone.
+ - Add a -f switch to killemacs so as to do a `kill -9` and cleanup the server socket file post that.
  - ~~Add package to view Markdown files. [markdown-mode.el](http://jblevins.org/projects/markdown-mode/markdown-mode.el).~~
  - ~~Add a package to cleanup whitespace.~~ [This.](http://www.gnu.org/software/emacs/manual/html_node/emacs/Useless-Whitespace.html)
  - ~~Inhibit-startup-screen.~~
