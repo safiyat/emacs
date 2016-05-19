@@ -18,9 +18,13 @@
 (setq-default kill-region nil)        ; To enable C-w for 'backward-kill-word
 (setq-default universal-argument nil) ; To enable C-u for 'backward-kill-sentence
 
+(defun backward-kill-line (arg)
+  "Kill ARG lines backward."
+  (interactive "p")
+  (kill-line (- 1 arg)))
+(global-set-key (kbd "C-u") 'backward-kill-line)
 (global-set-key (kbd "C-h") 'backward-delete-char)
 (global-set-key (kbd "C-w") 'backward-kill-word)
-(global-set-key (kbd "C-u") 'backward-kill-sentence)
 
 (global-set-key (kbd "<M-S-up>") 'scroll-down-line)
 (global-set-key (kbd "<M-S-down>") 'scroll-up-line)
