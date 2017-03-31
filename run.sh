@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /usr/bin/env bash
 
 ###############################################################################
 #                                    run.sh                                   #
@@ -14,8 +14,6 @@
 #                 ln -sf /full/path/to/run.sh /usr/bin/emacs                  #
 #                                                                             #
 ###############################################################################
-
-#set -x
 
 # File to store the script logging information if selected
 LOGFILE="$HOME/.log.emacs"
@@ -44,15 +42,25 @@ then
 else
         TERMINAL=false
         CREATE=" -c "
+        TERM="dumb"
         echo "$($bold)`date`: Using a graphical frame.$($normal)" >> $LOG
 fi
 
-if [ ! -S "/tmp/emacs$(id -u)/server" ]
+if [[ $@ == -psn* ]]
+then
+    echo "$($bold)`date`: Using Application.$($normal)" >> $LOG
+    $emacsclient_bin $CREATE  -d localhost:0 2>> $LOG
+else
+    echo "$($bold)`date`: Using Terminal.$($normal)" >> $LOG
+    $emacsclient_bin $CREATE $@ 2>> $LOG
+fi
+
+if [ $? -ne 0 ]
 then
         echo "`date`: Emacs server not running. Starting the server..." >> $LOG
         # Remove the f*cking lock.
         rm -f $HOME/.emacs.d/.emacs.desktop.lock
-        timeout 10s $emacs_bin --daemon 2> /dev/null
+        gtimeout 10s $emacs_bin --daemon 2> /dev/null
         if [ "$?" -eq "0" ]
         then
             echo "`date`: Server started successfully." >> $LOG
@@ -60,8 +68,6 @@ then
             echo "`date`: Server couldn't be started." >> $LOG
             exit
         fi
-else
         echo "`date`: Server already running. Starting a client." >> $LOG
+        $emacsclient_bin $CREATE $@  2>> $LOG
 fi
-
-$emacsclient_bin $CREATE $@  2>> $LOG
