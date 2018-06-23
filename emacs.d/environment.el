@@ -22,3 +22,4 @@
 ; Load all the mode files.
 (load-file (concat (file-name-as-directory cust-emacs-dir) "loadpath/mode/markdown-mode.el")) ; Load markdown module.
 (load-file (concat (file-name-as-directory cust-emacs-dir) "loadpath/mode/yaml-mode.el")) ; Load yaml module.
+(setq tramp-default-method "ssh")

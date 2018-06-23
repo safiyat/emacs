@@ -1,7 +1,7 @@
 (print (current-time-string))
 
 (setq user-full-name "Md Safiyat Reza")
-(setq user-mail-address "md.reza@snapdeal.com")
+(setq user-mail-address "safiyat@voereir.com")
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 			 ;; ("marmalade" . "https://marmalade-repo.org/packages/")
