@@ -1,0 +1,3 @@
+[submodule "emacs.d/loadpath/themes/flatland-emacs"]
+	path = emacs.d/loadpath/themes/flatland-emacs
+	url = https://github.com/gchp/flatland-emacs
